@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Note</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Inline styles specific to this page */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #f8f2f2;
+            text-shadow: 0 0 10px #f8f2f2, 0 0 20px #4287f5;
+            animation: glow-text 2s infinite alternate;
+            margin-bottom: 20px;
+        }
+
+        @keyframes glow-text {
+            0% { text-shadow: 0 0 10px #f8f2f2, 0 0 20px #4287f5; }
+            100% { text-shadow: 0 0 15px #f8f2f2, 0 0 30px #18b0f5; }
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .never-ending-box {
+            background: rgba(18, 75, 182, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 10px;
+            color: #fff;
+            font-weight: bold;
+            font-size: 1.5em;
+            width: 80%;
+            animation: grow-shrink 3s infinite;
+            margin: 20px 0;
+        }
+
+        @keyframes grow-shrink {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .balloons {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .balloon {
+            position: absolute;
+            bottom: -100px;
+            width: 50px;
+            height: 70px;
+            background: radial-gradient(circle, #18b0f5, #4287f5);
+            border-radius: 50% 50% 50% 50% / 50% 50% 60% 60%;
+            animation: float 6s infinite;
+        }
+
+        .balloon:nth-child(1) { left: 10%; animation-delay: 0s; }
+        .balloon:nth-child(2) { left: 30%; animation-delay: 1s; }
+        .balloon:nth-child(3) { left: 50%; animation-delay: 2s; }
+        .balloon:nth-child(4) { left: 70%; animation-delay: 3s; }
+        .balloon:nth-child(5) { left: 90%; animation-delay: 4s; }
+
+        @keyframes float {
+            0% { transform: translateY(0); opacity: 1; }
+            100% { transform: translateY(-400px); opacity: 0; }
+        }
+
+        a {
+            font-size: 1.5em;
+            text-decoration: none;
+            color: #f8f2f2;
+            padding: 10px 20px;
+            background: rgba(18, 75, 182, 0.5);
+            border: 2px solid #f8f2f2;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+            text-shadow: 0 0 10px #fff;
+        }
+    </style>
+</head>
+<body class="crackling-bg">
+    <div class="content">
+        <h1>🎉 Happy Birthday, Dear Aditi! 🎂</h1>
+        
+        <!-- Never Ending Box -->
+        <div class="never-ending-box">
+        <p>May your every second,every hour,every day,every week,every month,every year of your life and also your Life will be as amazing as you are may you will get everything you want or you wish for i will not be present with you but i am with you in every moment of your life just keep going in your life whenever you need i am with you! 💖</p>
+        </div>
+        
+        <!-- Navigation Button -->
+        <a class="glass-button" href="fun-options.html">Next: Fun Surprises 🎁</a>
+    </div>
+</body>
+</html>
